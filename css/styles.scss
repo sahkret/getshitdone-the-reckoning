@@ -1,6 +1,6 @@
 /* Custom variables */
 $primary: #F49E18;
-$primaryLight: #FFB235;
+$primaryLight: rgba(255, 178, 53, 0.77);
 $secondary: #F8F845;
 $title: "Helvetica Black";
 $text: "Helvetica";
@@ -51,16 +51,28 @@ body{
     @include font($text);
   }
 
+  a{
+    text-decoration: none;
+    color: $primary;
+
+    &:hover{
+      text-decoration: none;
+      color: $primaryLight;
+      cursor: pointer;
+    }
+  }
+
   .container-fluid{
     padding: 0;
   }
 
   .landing{
     position: relative;
+    margin-bottom: 3rem;
 
     &__img{
       width: 100vw;
-      height: 27vh;
+      height: 30vh;
     }
 
     &__logo{
@@ -74,8 +86,13 @@ body{
   .what{
 
 
+    &__title{
+      margin-bottom: 2rem;
+    }
+
     img{
       max-width: 87.5vw;
+      margin-bottom: 1rem;
     }
 
     p{
@@ -85,7 +102,7 @@ body{
 
   .breakbar{
     background-color: $secondary;
-    height: 4rem;
+    height: 5rem;
     width: 100vw;
     margin-bottom: 2rem;
   }
@@ -93,15 +110,37 @@ body{
   .who{
 
 
+    &__title{
+      margin-bottom: 2rem;
+    }
+
     &__text{
       margin: 0 2rem 3rem;
     }
 
     &__contact{
+      display: flex;
+      flex-flow: row wrap;
+
+      &__thumb{
+        max-width: 40%;
+        margin: 0.5rem auto;
 
 
-      p{
-        text-align: center;
+        a{
+          text-decoration: none;
+          color: #000;
+          cursor: pointer;
+        }
+
+        figcaption{
+          font-weight: 700;
+        }
+
+        p{
+          text-align: center;
+          font-weight: 100;
+        }
       }
     }
   }
@@ -109,8 +148,18 @@ body{
   footer{
     background-color: $secondary;
     margin-top: auto;
+    padding: .5rem 0;
+    font-size: 0.8rem;
 
     a{
+      text-decoration: none;
+      color: rgba(0,0,0,0.7);
+
+      &:hover{
+        color: $primary;
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
   }
 }
