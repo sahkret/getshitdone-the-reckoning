@@ -1,17 +1,19 @@
 /* Custom variables */
 $primary: #F49E18;
-$secondary: #548CBB;
-$dark: #212324;
 $primaryLight: #FFB235;
-$secondaryLight: #7DA1C2;
+$secondary: #F8F845;
+$title: "Helvetica Black";
+$text: "Helvetica";
+$bold: 600;
 
 /* Mixins */
-@mixin anchorLeft{
-  text-align: left;
+
+@mixin font($font){
+  font-family: $font;
 }
 
-
-/* Bootstrap import */
+/* Imports */
+@import "media.scss";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
@@ -21,18 +23,32 @@ $secondaryLight: #7DA1C2;
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+}
+
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   img{
     max-width: 100%;
   }
 
+  h1{
+    @include font($title);
+    font-size: 2rem;
+  }
+
+  h3{
+    @include font($title);
+  }
+
   p{
     text-align: left;
+    @include font($text);
   }
 
   .container-fluid{
@@ -40,29 +56,61 @@ body{
   }
 
   .landing{
-    @include anchorLeft;
-    background-image: url("../images/bright-color-design-1161547 (1).jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 30vh;
-    min-width: 95vw;
-    margin-bottom: 1rem;
+    position: relative;
 
     &__img{
-      width: 40%;
-      margin: 0.5rem;
+      width: 100vw;
+      height: 27vh;
+    }
+
+    &__logo{
+      position: absolute;
+      width: 40vw;
+      top: 0.7rem;
+      left: 0.6rem;
     }
   }
 
   .what{
 
+
+    img{
+      max-width: 87.5vw;
+    }
+
+    p{
+      margin: 0 2rem 3rem;
+    }
+  }
+
+  .breakbar{
+    background-color: $secondary;
+    height: 4rem;
+    width: 100vw;
+    margin-bottom: 2rem;
   }
 
   .who{
 
+
+    &__text{
+      margin: 0 2rem 3rem;
+    }
+
+    &__contact{
+
+
+      p{
+        text-align: center;
+      }
+    }
   }
 
-  .contact{
+  footer{
+    background-color: $secondary;
+    margin-top: auto;
 
+    a{
+    }
   }
 }

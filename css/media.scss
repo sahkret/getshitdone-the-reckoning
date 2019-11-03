@@ -1,0 +1,12 @@
+$note: "576px";
+$inbetween: "766px";
+$tablet: "996px";
+$teneighty: "1500px";
+$twofive: "2000px";
+$threekay: "2550px";
+
+@mixin mq($size){
+  @media only screen and (min-width: $size){
+    @content;
+  }
+}
