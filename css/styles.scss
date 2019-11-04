@@ -72,7 +72,7 @@ body{
 
     &__img{
       width: 100vw;
-      height: 30vh;
+      height: 33vh;
     }
 
     &__logo{
@@ -103,7 +103,7 @@ body{
   .breakbar{
     background-color: $secondary;
     height: 5rem;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 2rem;
   }
 
@@ -159,6 +159,38 @@ body{
         color: $primary;
         text-decoration: none;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@include mq($tablet){
+  *{
+    font-size: 20px;
+  }
+
+  body{
+
+    .landing__img {
+      height: 50vh;
+    }
+  }
+}
+
+@include mq($teneighty){
+
+  body{
+
+    .landing {
+
+      &__logo{
+        width: 33vw;
+        top: 1rem;
+        left: 1.5rem;
+      }
+
+      &__img {
+        height: 100vh;
       }
     }
   }
