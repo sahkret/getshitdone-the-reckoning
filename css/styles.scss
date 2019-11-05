@@ -72,7 +72,7 @@ body{
 
     &__img{
       width: 100vw;
-      height: 33vh;
+      height: 33%;
     }
 
     &__logo{
@@ -172,7 +172,27 @@ body{
   body{
 
     .landing__img {
-      height: 50vh;
+      height: 80%;
+    }
+
+    .what {
+
+
+      img{
+        max-width: 60vw;
+      }
+
+      p {
+        margin: 0 10rem 3rem;
+      }
+    }
+
+    .who__text{
+
+
+      p {
+        margin: 0 10rem 3rem;
+      }
     }
   }
 }
@@ -190,7 +210,7 @@ body{
       }
 
       &__img {
-        height: 100vh;
+        height: 100%;
       }
     }
   }
