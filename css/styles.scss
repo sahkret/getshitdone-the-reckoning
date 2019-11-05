@@ -199,18 +199,74 @@ body{
 
 @include mq($teneighty){
 
+  *{
+    font-size: 30px;
+  }
   body{
 
     .landing {
 
       &__logo{
         width: 33vw;
-        top: 1rem;
-        left: 1.5rem;
+        top: 0.7rem;
+        left: 2rem;
       }
 
       &__img {
-        height: 100%;
+        max-height: 85vh;
+      }
+    }
+
+    .what{
+
+
+      p{
+        margin: 1rem 4rem 3rem;
+      }
+
+      &__content{
+        display: flex;
+        flex-direction: row-reverse;
+
+        img{
+          max-width: 40vw;
+          margin: 2rem 4rem;
+        }
+
+        &__text{
+          margin-top: 4rem;
+        }
+      }
+
+      &__development{
+        display: flex;
+
+        img{
+          max-width: 40vw;
+          margin: 2rem 4rem;
+        }
+
+        &__text{
+          margin-top: 4rem;
+        }
+      }
+    }
+
+    .who{
+
+      &__text{
+
+        p{
+          margin: 0 10rem 1rem;
+        }
+      }
+
+      &__contact{
+
+
+        &__thumb{
+          max-width: 27%;
+        }
       }
     }
   }
